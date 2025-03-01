@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Privacy Nudge",
+    "version": "1.0",
+    "description": "Get nudges when sharing files on Google Drive.",
+    "permissions": [
+      "identity",
+      "storage",
+      "notifications",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+      }
+    },
+    "oauth2": {
+      "client_id": "CLIENT_ID",
+      "scopes": [
+        "https://www.googleapis.com/auth/drive.readonly",
+        "https://www.googleapis.com/auth/drive.metadata.readonly",
+        "https://www.googleapis.com/auth/drive.file" 
+      ]
+    }
+  }
